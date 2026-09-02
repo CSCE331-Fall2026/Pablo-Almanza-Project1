@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 40px;
+  background: #FFF7E6;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h2 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .hero {
@@ -28,32 +29,52 @@ p {
 }
 
 .hero-photo {
-  width: 40%;
-  background: black;
-  color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid black;
 
   /*remove this after photo is imported in*/
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
   display: flex-col;
-  background: black;
 }
 
 .experience {
-  background: blue;
+  width: 50%;
+  height: fit-content;
+  border: 2px solid black;
 }
 
 .projects {
-  background: purple;
+  width: 50%;
+  height: fit-content;
+  border: 2px solid purple;
 }
 
+.contact {
+  height: fit-content;
+  border: 2px solid red;
+}
 
+.leadership {
+  height: fit-content;
+  border: 2px solid green;
+}
 
+.work {
+  display: flex-col;
+  gap: 40px;
+}
 
-
-
+.work-sections {
+  display: flex;
+  gap: 40px;
+}
 
 
 
