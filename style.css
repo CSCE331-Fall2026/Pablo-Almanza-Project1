@@ -1,0 +1,80 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  width: 60%;
+}
+
+.hero-photo {
+  width: 40%;
+  background: black;
+  color: white;
+
+  /*remove this after photo is imported in*/
+  text-align: center;
+}
+
+.content {
+  display: flex-col;
+  background: black;
+}
+
+.experience {
+  background: blue;
+}
+
+.projects {
+  background: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
