@@ -1,9 +1,8 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 40px;
-  background: #FFF7E6;
+  background: #fff7e6;
 }
 
 h1 {
@@ -41,19 +40,14 @@ p {
 }
 
 .content {
-  display: flex-col;
+  display: flex;
+  flex-direction: column;
 }
 
-.experience {
-  width: 50%;
-  height: fit-content;
-  border: 2px solid black;
-}
-
+.experience,
 .projects {
-  width: 50%;
-  height: fit-content;
-  border: 2px solid purple;
+  flex: 1;
+  border: 2px solid black;
 }
 
 .contact {
@@ -67,7 +61,8 @@ p {
 }
 
 .work {
-  display: flex-col;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 
@@ -75,27 +70,3 @@ p {
   display: flex;
   gap: 40px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
