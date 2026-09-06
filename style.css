@@ -1,8 +1,51 @@
+/* COLOR PALETTE for site*/
+:root {
+  --bg: #f3efe7;
+  --surface: #d8dee9;
+  --accent: #88c0d0;
+  --accent-dark: #81a1c1;
+  --text: #2e3440;
+  --text-muted: #3b4252;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Valley Sans", sans-serif;
   margin: 0;
-  padding: 40px;
-  background: #fff7e6;
+  background: var(--bg);
+  color: var(--text);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+}
+
+.navbar-logo {
+  color: var(--text);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--accent);
 }
 
 h1 {
@@ -13,13 +56,41 @@ h2 {
   font-size: 24px;
 }
 
+h1,
+h2,
+.navbar-logo {
+  font-family: "Caacupe One", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  color: var(--text);
+}
+
 p {
-  font-size: 12px;
+  font-size: 16px;
+}
+
+main {
+  padding: 3rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--surface);
 }
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
 }
 
@@ -27,20 +98,8 @@ p {
   width: 60%;
 }
 
-.hero-photo {
-  width: 200px;
-  height: 200px;
-  border: 2px solid black;
-
-  /*remove this after photo is imported in*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .content {
   display: flex;
-  flex-direction: column;
 }
 
 .experience,
@@ -50,8 +109,9 @@ p {
 }
 
 .contact {
-  height: fit-content;
-  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .leadership {
@@ -68,4 +128,37 @@ p {
 .work-sections {
   display: flex;
   gap: 40px;
+}
+
+/* Hover animation for links */
+a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.contact a {
+  color: var(--text);
+}
+
+.hero img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5%;
 }
