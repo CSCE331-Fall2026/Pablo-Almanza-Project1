@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Pablo Almanza</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caacupe+One&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="activities.html">Activities</a>
-      <a href="genai.html">GenAI</a>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">Pablo Almanza</a>
+
+      <div class="navbar-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="activities.html">Activities</a>
+        <a href="genai.html">GenAI</a>
+      </div>
     </nav>
     <main>
       <div class="work">
-        <h2>> Work_</h2>
+        <h2>Work</h2>
         <div class="work-sections">
           <!-- Experience Section -->
           <div class="experience">
-            <h3>> Experience_</h3>
+            <h3>Experience</h3>
 
             <div class="experience-item">
               <h3>PricewaterhouseCoopers (PWC)</h3>
@@ -52,33 +61,53 @@
           </div>
 
           <!-- Projects Section -->
+
           <div class="projects">
-            <h3>> Projects_</h3>
-
-            <div class="project-item">
-              <h3>
-                <a
-                  href="https://shpe-connect.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >SHPE Connect</a
-                >
-              </h3>
-              <p>Next.js, TypeScript, PostgreSQL, Prisma, NextAuth, Vercel</p>
-            </div>
-
-            <div class="project-item">
-              <h3>Terminal Home</h3>
-              <p>Python, Textual, tmux, pytest, GitHub Actions</p>
-            </div>
-
-            <div class="project-item">
+            <h2>Projects</h2>
+            <button class="project-card" type="button">
+              <img src="images/shpe-connect.png" alt="SHPE Connect website" />
+              <div class="proejct-info">
+                <h3>SHPE Connect</h3>
+                <p>Next.js, TypeScript, PostgreSQL, Prisma</p>
+              </div>
+            </button>
+            <button class="project-card" type="button">
+              <img src="images/terminal-home.png" />
+              <div class="proejct-info">
+                <h3>Terminal Home</h3>
+                <p>Python, Textual, tmux, pytest, Git/GitHub</p>
+              </div>
+            </button>
+            <button class="project-card" type="button">
+              <img src="images/tree-chop-mania.png" />
               <h3>Tree Chop Mania</h3>
               <p>Python, Git/GitHub</p>
-            </div>
+            </button>
           </div>
         </div>
       </div>
+
+      <footer>
+        <div class="contact">
+          <a
+            href="https://github.com/PabloAlmanza47"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/pabloalmanza/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="resume.pdf" target="_blank">Resume</a>
+          <a href="mailto:pabloalmanza3247@gmail.com"
+            >pabloalmanza3247@gmail.com</a
+          >
+        </div>
+        <p>© 2026, Pablo Almanza</p>
+      </footer>
     </main>
   </body>
 </html>
