@@ -1,7 +1,7 @@
 Hello welcome to my website :D
 
 
-Landing Page: https://people.tamu.edu/~pabloalm.3247/ 
+Landing Page: https://people.tamu.edu/~pabloalm.3247/
 HTML-Only Version: https://people.tamu.edu/~pabloalm.3247/index_no_css.html
 
 Checkpoint 1:
