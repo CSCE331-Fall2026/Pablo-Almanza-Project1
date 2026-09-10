@@ -6,6 +6,7 @@
   --accent-dark: #81a1c1;
   --text: #2e3440;
   --text-muted: #3b4252;
+  --card-bg: rgba(216, 222, 233, 0.35);
 }
 
 /* Dark Mode Colors */
@@ -16,6 +17,7 @@
   --accent-dark: #81a1c1;
   --text: #eceff4;
   --text-muted: #d8dee9;
+  --card-bg: rgba(59, 66, 82, 0.45);
 }
 
 body {
@@ -34,6 +36,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 3rem;
+  border-bottom: 1px solid var(--surface);
 }
 
 .navbar-logo {
@@ -91,7 +94,7 @@ main {
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 10px;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -113,11 +116,6 @@ footer {
   display: flex;
 }
 
-.experience,
-.projects {
-  flex: 1;
-}
-
 .contact {
   display: flex;
   align-items: center;
@@ -135,8 +133,10 @@ footer {
 }
 
 .work-sections {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.4fr);
+  align-items: start;
 }
 
 /* Hover animation for links */
@@ -175,18 +175,19 @@ a:hover::after {
 /* Project card animation */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 320px);
-  gap: 5px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
   margin-top: 20px;
 }
 
 .project-card {
-  width: 320px;
+  width: 100%;
   padding: 0;
   border: 1px solid var(--text-muted);
-  background: none;
+  background: var(--card-bg);
   color: inherit;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .project-image-button {
@@ -257,9 +258,8 @@ a:hover::after {
 }
 
 .projects {
-  flex: 1;
   padding: 24px;
-  border: 1px solid var(--text-muted);
+  border: 1px solid var(--surface);
   border-radius: 12px;
 }
 
@@ -282,13 +282,15 @@ a:hover::after {
 
 .experience {
   position: relative;
-  padding-left: 28px;
+  padding: 24px 24px 24px 52px;
+  border: 1px solid var(--surface);
+  border-radius: 12px;
 }
 
 .experience::before {
   content: "";
   position: absolute;
-  left: 7px;
+  left: 31px;
   top: 52px;
   bottom: 10px;
   width: 1px;
@@ -340,4 +342,38 @@ a:hover::after {
   margin-top: 8px;
   color: var(--text-muted);
   font-size: 16px;
+}
+
+.project-title h3 {
+  margin: 0;
+}
+
+.project-info p {
+  margin: 8px 0 0;
+}
+
+.projects > h2,
+.experience > h2 {
+  margin-top: 0;
+}
+
+.projects,
+.experience {
+  border: 1px solid var(--surface);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tech-stack span {
+  padding: 4px 8px;
+  border: 1px solid var(--surface);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg);
 }
