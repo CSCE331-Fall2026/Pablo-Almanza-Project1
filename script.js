@@ -11,3 +11,13 @@ themeToggle.addEventListener("click", () => {
     themeToggle.textContent = "Light Mode";
   }
 });
+
+//Project card
+const projectImageButtons = document.querySelectorAll(".project-image-button");
+
+projectImageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".project-card");
+    card.classList.toggle("expanded");
+  });
+});
